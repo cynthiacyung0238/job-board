@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2027求职机会看板</title>
+<style>
+:root{--bg:#f4f1ea;--card:#fbfaf7;--ink:#24231f;--muted:#777168;--line:#d9d3c8;--accent:#66735c;--soft:#ece8df;--bad:#984b4b;--good:#4e755a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+header{padding:24px 28px 15px;background:rgba(251,250,247,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+h1{margin:0 0 6px;font-size:27px}.sub{font-size:13px;color:var(--muted)}main{max-width:1480px;margin:auto;padding:20px 24px 42px}
+.stats{display:grid;grid-template-columns:repeat(7,minmax(100px,1fr));gap:9px}.stat{background:var(--card);border:1px solid var(--line);padding:13px;border-radius:14px}.stat b{display:block;font-size:24px}
+.soon{margin:15px 0;padding:14px;background:#fff8e7;border:1px solid #e6d5a6;border-radius:14px}.soon h3{margin:0 0 8px}
+.tabs,.filters,.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}button,select{font:inherit;border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:var(--card)}button{cursor:pointer}.tab.active{background:#282722;color:white}
+.panel{display:none}.panel.active{display:block}.grid{display:grid;gap:11px}.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:15px}
+.top{display:flex;justify-content:space-between;gap:12px}.company{font-weight:700;font-size:18px}.role{margin-top:3px}.meta,.small{font-size:12px;color:var(--muted)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}.tag{font-size:12px;background:var(--soft);border:1px solid #ded7cb;border-radius:99px;padding:4px 7px}.tag.good{background:#e7efe8;color:var(--good)}.tag.bad{background:#f5e7e7;color:var(--bad)}
+.details{display:grid;grid-template-columns:1fr 1fr;gap:7px 15px;margin-top:10px}.details div{font-size:13px;line-height:1.5}.details strong{color:#4b4841}
+a.btn{display:inline-block;text-decoration:none;color:var(--ink);background:white;border:1px solid var(--line);padding:8px 10px;border-radius:9px}a.btn.primary{background:var(--accent);border-color:var(--accent);color:white}a.disabled{opacity:.4;pointer-events:none}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}th,td{padding:9px;border-bottom:1px solid var(--line);font-size:13px;text-align:left;vertical-align:top}th{background:#ede9e1}
+.note{font-size:12px;color:var(--muted);margin-top:15px}
+@media(max-width:850px){header{position:static}.stats{grid-template-columns:repeat(2,1fr)}.details{grid-template-columns:1fr}.top{display:block}}
+</style>
+</head>
+<body>
+<header><h1>2027求职机会看板</h1><div class="sub">高校行政 · 出版文化 · 文博艺术 · 正规外企　｜　最后更新时间：<span id="updated">2026-09-24</span></div></header>
+<main>
+<div class="stats">
+<div class="stat"><b id="s-fast">0</b>建议尽快投递</div><div class="stat"><b id="s-eval">0</b>待评估</div><div class="stat"><b id="s-sent">0</b>已投递</div><div class="stat"><b id="s-follow">0</b>跟进中</div><div class="stat"><b id="s-bad">0</b>资格不符</div><div class="stat"><b id="s-exp">0</b>已截止</div><div class="stat"><b id="s-watch">0</b>长期监控</div>
+</div>
+<div class="soon"><h3>7天内截止</h3><div id="soon"></div></div>
+<div class="tabs"><button class="tab active" data-tab="jobs">岗位看板</button><button class="tab" data-tab="watch">长期监控池</button><button class="tab" data-tab="progress">投递进度</button></div>
+<section id="jobs" class="panel active">
+<div class="filters">
+<select id="city"><option value="">全部城市</option><option>杭州</option><option>上海</option><option>武汉</option><option>南京</option><option>北京</option></select>
+<select id="track"><option value="">全部赛道</option><option>出版</option><option>文化央企</option><option>文博</option><option>国企传媒</option><option>正规外企</option><option>高校行政</option></select>
+<select id="status"><option value="">全部状态</option><option>建议尽快投递</option><option>待评估</option><option>已投递</option><option>跟进中</option><option>笔试/面试</option><option>Offer</option><option>放弃</option><option>资格不符</option></select>
+</div><div id="cards" class="grid"></div>
+</section>
+<section id="watch" class="panel"><table><thead><tr><th>单位</th><th>城市</th><th>类型</th><th>为何值得关注</th><th>目标岗位</th></tr></thead><tbody id="watchbody"></tbody></table></section>
+<section id="progress" class="panel"><div id="progressCards" class="grid"></div></section>
+<div class="note">岗位状态保存在当前浏览器中。未核实的信息显示“待核实/待补”，不虚构招聘信息。</div>
+</main>
+<script>
+var initialJobs=[{"company":"中国出版集团有限公司","role":"2027届校园招聘（多岗位）","city":"北京/上海","track":"出版/文化央企","type":"校招正式岗","employment":"正式全职","published":"2026-09-23","deadline":"2026-11-15","education":"以具体岗位为准","major":"历史学类、文学类、哲学类、新闻传播类、艺术学类、管理学类等","party":"以具体岗位为准","exam":"综合素质测试（编辑类/非编辑类）+ 面试 + 岗位实习","match":"中国近现代史硕士、出版社实习、文字与史料研究训练；工商管理本科可兼容综合管理岗","risk":"每人最多填2个职位，第一志愿重要","priority":"高","status":"建议尽快投递","apply":"https://cnpubg.iguopin.com/","notice":"https://cnpubg.iguopin.com/"},{"company":"中信出版集团","role":"助理编辑/营销编辑等“璞玉计划”","city":"北京","track":"出版","type":"2027校招正式岗","employment":"正式全职","published":"2026-09-01","deadline":"2026-12-31","education":"硕士","major":"以具体岗位为准","party":"无统一硬性要求","exam":"待核实","match":"历史学硕士、出版实习、内容研究与文字能力匹配","risk":"岗位多在北京；需按具体方向定制简历","priority":"高","status":"建议尽快投递","apply":"","notice":""},{"company":"外语教学与研究出版社","role":"市场助理","city":"北京","track":"出版","type":"2027秋招正式岗","employment":"正式全职","published":"2026-09-21","deadline":"2026-11-15","education":"本科及以上","major":"专业不限","party":"无统一硬性要求","exam":"笔试/AI面试 + 线下面试 + 实习考察 + 终面","match":"出版社实习、本科工商管理、文化内容理解","risk":"岗位偏市场而非编辑","priority":"中","status":"待评估","apply":"http://hr.fltrp.com/campus","notice":"http://hr.fltrp.com/campus"},{"company":"华数传媒控股","role":"技术管培生（产品方向）","city":"杭州","track":"国企传媒","type":"2027校招正式岗","employment":"正式全职","published":"2026-09-01","deadline":"2026-10-20","education":"以具体岗位为准","major":"待核实","party":"未见统一要求","exam":"待核实","match":"杭州、国企、产品/项目协调能力可迁移","risk":"技术管培定位，非内容岗","priority":"中","status":"待评估","apply":"https://wasu.hotjob.cn","notice":"https://wasu.hotjob.cn"},{"company":"宝可梦（上海）玩具有限公司","role":"综合业务岗","city":"上海/其他","track":"正规外企/IP文化","type":"2027校招正式岗","employment":"正式全职","published":"2026-09-01","deadline":"2026-10-15","education":"以公告为准","major":"专业限制相对宽","party":"无","exam":"待核实","match":"文化/IP、活动策划、传播、项目协调","risk":"门店运营起步、全国轮岗、要求日语或英语流利","priority":"中","status":"待评估","apply":"","notice":""},{"company":"上海博物馆","role":"宣传员/创建员","city":"上海","track":"文博事业单位","type":"公开招聘","employment":"事业单位","published":"2026-08-25","deadline":"2026-09-11","education":"硕士","major":"历史学/文学/哲学/管理学等","party":"硬性要求中共党员","exam":"要求参加2026上海事业单位集中笔试并达到规定分数","match":"专业和国企党群/材料经历匹配","risk":"党员资格不符；已截止","priority":"低","status":"资格不符","apply":"","notice":""}];
+var watch=[["上海市历史博物馆（上海革命历史博物馆）","上海","文博事业单位","中国近现代史、城市史、公共历史传播与你专业高度匹配","革命史研究、文博宣传、教育活动策划、公共历史传播"],["中国丝绸博物馆","杭州","文博/非遗/艺术","杭州本地；丝绸史、传统工艺、时尚与文化交叉","社会教育、国际交流、藏品管理、陈列展览、文化项目"],["中国外文局/中国国际传播集团","北京","出版/国际传播","出版、版权、国际传播与研究岗位类型丰富","编辑、策划、历史文化内容、国际出版项目、版权与文化交流、研究、综合管理"],["中国文化传媒集团","北京","文化央企/媒体/艺术","艺术、文旅、非遗、媒体和研究业务交叉","文化项目、艺术市场、文旅、非遗、品牌传播、研究/综合管理"],["中国对外文化集团","北京/深圳等","文化央企/演艺会展","国际演艺、艺术会展、文化交流资源壁垒高","文化项目、艺术会展、国际文化交流、品牌传播、综合管理"],["上影集团/上海美术电影制片厂","上海","国企影视/IP","经典文化IP与内容产业结合","资料整理、学术研究、项目策划、文案、新媒体、IP文化项目"],["上海大剧院艺术中心/上海大歌剧院","上海","国有文化机构/演艺","高文化资本受众、演艺项目密度高","项目执行、文案宣传、文创经营、综合管理、文化项目"],["浙江出版联合集团及旗下出版社","杭州","出版国企","杭州本地、出版体系完整","出版策划、编辑、行政、综合管理"],["上海世纪出版集团及旗下出版社","上海","出版国企","上海重点出版体系","编辑、策划、发行、综合管理"],["西泠印社集团","杭州","文化国企/艺术收藏","艺术、收藏、老字号、文化壁垒高","编辑、品牌、文化项目、综合管理"],["朵云轩","上海","国有文化/艺术收藏","书画艺术、收藏、老字号属性明显","艺术项目、品牌、综合管理"],["保利文化/保利拍卖/保利工艺","北京/上海等","央企文化/艺术品","艺术品、演艺、收藏业务高壁垒","文化项目、拍卖运营、品牌、综合管理"],["中国唱片集团","北京/上海等","文化央企/音乐","音乐内容与文化资产属性","内容、版权、品牌、综合管理"],["故宫出版社","北京","文博出版","文博内容与出版结合","编辑、策划、文创、文化传播"],["中国教育出版传媒集团/人民教育出版社/高等教育出版社/语文出版社","北京","教育出版央企","严肃出版、知识壁垒高","编辑、策划、综合管理"]];
+var jobs=JSON.parse(localStorage.getItem("careerJobs")||"null")||initialJobs;
+function save(){localStorage.setItem("careerJobs",JSON.stringify(jobs))}
+function esc(s){return String(s||"").replace(/[&<>"']/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]})}
+function days(d){if(!d)return null;return Math.ceil((new Date(d+"T23:59:59")-new Date())/86400000)}
+function render(){
+var city=document.getElementById("city").value,track=document.getElementById("track").value,status=document.getElementById("status").value;
+var f=jobs.filter(function(j){return(!city||j.city.indexOf(city)>-1)&&(!track||j.track.indexOf(track)>-1)&&(!status||j.status===status)});
+document.getElementById("s-fast").textContent=jobs.filter(function(j){return j.status==="建议尽快投递"}).length;
+document.getElementById("s-eval").textContent=jobs.filter(function(j){return j.status==="待评估"}).length;
+document.getElementById("s-sent").textContent=jobs.filter(function(j){return j.status==="已投递"}).length;
+document.getElementById("s-follow").textContent=jobs.filter(function(j){return j.status==="跟进中"}).length;
+document.getElementById("s-bad").textContent=jobs.filter(function(j){return j.status==="资格不符"}).length;
+document.getElementById("s-exp").textContent=jobs.filter(function(j){var x=days(j.deadline);return x!==null&&x<0}).length;
+document.getElementById("s-watch").textContent=watch.length;
+var soon=jobs.filter(function(j){var x=days(j.deadline);return x!==null&&x>=0&&x<=7}).sort(function(a,b){return days(a.deadline)-days(b.deadline)});
+document.getElementById("soon").innerHTML=soon.length?soon.map(function(j){return '<div class="small"><b>'+esc(j.company)+'</b> · '+esc(j.role)+' · 截止 '+esc(j.deadline)+' · <b>剩余 '+days(j.deadline)+' 天</b></div>'}).join(""):'<div class="small">暂无 7 天内截止岗位。</div>';
+document.getElementById("cards").innerHTML=f.map(function(j){
+var i=jobs.indexOf(j),dl=days(j.deadline),dlt=j.deadline?(dl<0?"已截止 "+Math.abs(dl)+" 天":"剩余 "+dl+" 天"):"待核实";
+return '<article class="card"><div class="top"><div><div class="company">'+esc(j.company)+'</div><div class="role">'+esc(j.role)+'</div><div class="meta">'+esc(j.city)+' · '+esc(j.track)+' · '+esc(j.type)+' · '+esc(j.employment)+'</div></div><div class="tags"><span class="tag">'+esc(j.priority)+'优先级</span><span class="tag '+((j.status==="建议尽快投递"||j.status==="已投递")?"good":(j.status==="资格不符"?"bad":""))+'">'+esc(j.status)+'</span></div></div><div class="tags"><span class="tag">发布 '+esc(j.published||"待核实")+'</span><span class="tag">截止 '+esc(j.deadline||"待核实")+'</span><span class="tag">'+esc(dlt)+'</span></div><div class="details"><div><strong>学历：</strong>'+esc(j.education)+'</div><div><strong>专业：</strong>'+esc(j.major)+'</div><div><strong>党员：</strong>'+esc(j.party)+'</div><div><strong>考试：</strong>'+esc(j.exam)+'</div><div><strong>匹配点：</strong>'+esc(j.match)+'</div><div><strong>硬伤/风险：</strong>'+esc(j.risk)+'</div></div><div class="actions"><a class="btn primary '+(j.apply?"":"disabled")+'" href="'+esc(j.apply||"#")+'" target="_blank">立即投递</a><a class="btn '+(j.notice?"":"disabled")+'" href="'+esc(j.notice||"#")+'" target="_blank">查看公告</a><select onchange="setStatus('+i+',this.value)">'+["建议尽快投递","待评估","已投递","跟进中","笔试/面试","Offer","放弃","资格不符"].map(function(s){return '<option '+(j.status===s?"selected":"")+'>'+s+'</option>'}).join("")+'</select></div></article>'}).join("");
+document.getElementById("watchbody").innerHTML=watch.map(function(r){return "<tr>"+r.map(function(c){return "<td>"+esc(c)+"</td>"}).join("")+"</tr>"}).join("");
+var p=jobs.filter(function(j){return ["已投递","跟进中","笔试/面试","Offer"].indexOf(j.status)>-1});
+document.getElementById("progressCards").innerHTML=p.length?p.map(function(j){return '<div class="card"><div class="company">'+esc(j.company)+'</div><div>'+esc(j.role)+'</div><div class="tags"><span class="tag good">'+esc(j.status)+'</span><span class="tag">'+esc(j.city)+'</span></div></div>'}).join(""):'<div class="card small">还没有标记为“已投递/跟进中/笔试面试/Offer”的岗位。</div>';
+}
+window.setStatus=function(i,v){jobs[i].status=v;save();render()};
+["city","track","status"].forEach(function(id){document.getElementById(id).addEventListener("change",render)});
+Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(b){b.onclick=function(){Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(x){x.classList.remove("active")});b.classList.add("active");Array.prototype.forEach.call(document.querySelectorAll(".panel"),function(x){x.classList.remove("active")});document.getElementById(b.getAttribute("data-tab")).classList.add("active")}});
+render();
+</script>
+</body></html>
