@@ -1,6 +1,6 @@
 window.CAREER_DATA = {
   meta: {
-    updated: "2026-10-04",
+    updated: "2026-10-15",
     note: "平台投递仅记录出现HR‘感兴趣/交换简历/简历合适’等正向信号的机会；未注明后续者，默认正向反馈后暂无进一步回复。"
   },
   applications: [
@@ -35,7 +35,11 @@ window.CAREER_DATA = {
     {id:"app-028",company:"卓尔数科",role:"人力资源（J10243）",city:"武汉",salary:"",source:"BOSS",recruitType:"校招/平台机会",employment:"正式全职",track:"人力HR",status:"停止招聘",applied:"2026-09-07",lastContact:"2026-09-11",deadline:"",priority:"B",core:false,match:"招聘、培训、员工关系等与人力方向匹配。",risk:"岗位已停止招聘。",next:"归档。",note:"此前已沟通了解；当前停止招聘。",url:""},
     {id:"app-029",company:"杭州潮牌网络科技有限公司",role:"文理科文稿编辑（兼职）",city:"杭州",salary:"300-600元/天",source:"BOSS",recruitType:"兼职",employment:"兼职",track:"编辑内容",status:"交换简历",applied:"2026-09-23",lastContact:"2026-09-23",deadline:"",priority:"C",core:false,match:"文字编辑能力。",risk:"兼职，不计入本轮正式秋招主漏斗。",next:"默认隐藏于正式岗视图。",note:"",url:""},
     {id:"app-030",company:"吉安卓渠科技有限公司",role:"文章写作（全科均可）",city:"武汉",salary:"150-300元/天",source:"BOSS",recruitType:"兼职",employment:"兼职",track:"编辑内容",status:"HR感兴趣",applied:"2026-09-23",lastContact:"2026-09-23",deadline:"",priority:"C",core:false,match:"文字能力。",risk:"兼职，不纳入正式秋招漏斗。",next:"默认隐藏于正式岗视图。",note:"",url:""},
-    {id:"app-031",company:"北京收纳熊生活服务",role:"收纳整理师",city:"北京",salary:"8-12K",source:"BOSS",recruitType:"平台机会",employment:"正式全职/待核",track:"其他/生活服务",status:"交换简历",applied:"2026-09-23",lastContact:"2026-09-23",deadline:"",priority:"C",core:false,match:"属于个人兴趣探索方向。",risk:"非本轮核心职业线。",next:"作为探索记录，不计入核心求职判断。",note:"正向反馈后暂无进一步回复。",url:""}
+    {id:"app-031",company:"北京收纳熊生活服务",role:"收纳整理师",city:"北京",salary:"8-12K",source:"BOSS",recruitType:"平台机会",employment:"正式全职/待核",track:"其他/生活服务",status:"交换简历",applied:"2026-09-23",lastContact:"2026-09-23",deadline:"",priority:"C",core:false,match:"属于个人兴趣探索方向。",risk:"非本轮核心职业线。",next:"作为探索记录，不计入核心求职判断。",note:"正向反馈后暂无进一步回复。",url:""},
+    {id:"app-032",company:"韵达",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-15",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-15确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
+    {id:"app-033",company:"上海医药",role:"岗位未记录",city:"上海",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-15",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-15确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
+    {id:"app-034",company:"沃尔玛",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-15",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-15确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
+    {id:"app-035",company:"德州仪器",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-15",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-15确认已拒绝；具体岗位信息未记录，不补猜。",url:""}
   ],
   hc: [
     {id:"hc-001",company:"中国教育出版传媒集团有限公司",role:"2027年应届高校毕业生公开招聘（所属出版单位多岗位）",city:"北京",track:"出版/文化央企",type:"2027应届公开招聘",published:"2026-09-29",deadline:"2026-10-21",priority:"S",status:"建议尽快投递",match:"历史学硕士与出版实习高度匹配；工商管理本科可覆盖部分综合管理方向。",risk:"需逐岗核对专业与岗位条件。",url:"https://jybzp.chsi.com.cn/home/bul/announcement/ymq873fg3ej1azdq"},
