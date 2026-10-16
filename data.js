@@ -45,10 +45,14 @@ window.CAREER_DATA = {
   ],
   hc: [
     {id:"hc-001",company:"中国教育出版传媒集团有限公司",role:"2027年应届高校毕业生公开招聘（所属出版单位多岗位）",city:"北京",track:"出版/文化央企",type:"2027应届公开招聘",published:"2026-09-29",deadline:"2026-10-21",priority:"S",status:"本轮无合适岗位",match:"用户已逐岗核对，本轮无符合资格及方向的岗位。",risk:"本轮不再提醒投递。",url:"https://jybzp.chsi.com.cn/home/bul/announcement/ymq873fg3ej1azdq"},
-    {id:"hc-002",company:"中国出版集团有限公司",role:"2027届校园招聘（多岗位）",city:"北京/上海",track:"出版/文化央企",type:"校招正式岗",published:"2026-09-23",deadline:"2026-11-15",priority:"S",status:"已投递/部分岗位",match:"历史学、出版实习、文字研究与工商管理背景均可覆盖不同岗位。",risk:"每人可填职位有限，需做志愿优先级。",url:"https://cnpubg.iguopin.com/"},
+    {id:"hc-002",company:"中国出版集团有限公司",role:"2027届校园招聘（多岗位）",city:"北京/上海",track:"出版/文化央企",type:"校招正式岗",published:"2026-09-23",deadline:"2026-11-15",priority:"S",status:"已投递",match:"历史学、出版实习、文字研究与工商管理背景均可覆盖不同岗位。",risk:"每人可填职位有限，需做志愿优先级。",url:"https://cnpubg.iguopin.com/"},
     {id:"hc-003",company:"中信出版集团",role:"“璞玉计划”助理编辑/营销编辑等",city:"北京",track:"出版",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-12-31",priority:"S",status:"已投递/平台互动",match:"历史学硕士、出版实习、内容研究与文字能力匹配。",risk:"需要按岗位方向定制材料。",url:""},
     {id:"hc-004",company:"外语教学与研究出版社",role:"市场助理等校招岗位",city:"北京",track:"出版",type:"2027秋招正式岗",published:"2026-09-21",deadline:"2026-11-15",priority:"B",status:"待评估",match:"出版社实习、本科工商管理、文化内容理解。",risk:"部分岗位偏市场而非编辑。",url:"http://hr.fltrp.com/campus"},
-    {id:"hc-005",company:"华数传媒控股",role:"2027校招相关岗位",city:"杭州",track:"国企传媒",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-10-20",priority:"B",status:"本轮无合适岗位",match:"用户已核对，本轮无合适岗位。",risk:"现有明确岗位可能偏技术。",url:"https://wasu.hotjob.cn"}
+    {id:"hc-005",company:"华数传媒控股",role:"2027校招相关岗位",city:"杭州",track:"国企传媒",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-10-20",priority:"B",status:"本轮无合适岗位",match:"用户已核对，本轮无合适岗位。",risk:"现有明确岗位可能偏技术。",url:"https://wasu.hotjob.cn"},
+    {id:"hc-006",company:"江苏凤凰出版传媒集团",role:"2026秋招：文科编辑、编校、内容策划（逐岗资格待核）",city:"南京/江苏其他城市",track:"文化出版国企",type:"2027届校招/秋季招聘",published:"2026-10-09",deadline:"2026-11-01",priority:"A",status:"资格待核",match:"历史学硕士、出版社编辑实习；明确包含2027届。",risk:"每人限报1岗；岗位专业、党员要求及具体用工主体待逐岗核实。",url:"https://campus.51job.com/ppmg2026"},
+    {id:"hc-007",company:"浙江出版联合集团",role:"2026秋招：学术编辑（2027届资格待核）",city:"杭州/浙江",track:"文化出版国企",type:"2026秋季招聘",published:"2026-09-19",deadline:"2026-10-25",priority:"A",status:"资格待核",match:"杭州、学术编辑与历史研究背景相关。",risk:"尚未确认2027届毕业生资格、历史学专业要求及具体党员条件。",url:"https://www.zjcb.com/"},
+    {id:"hc-008",company:"江苏省农垦集团",role:"2026秋招：综合办公室、企业管理方向（逐岗资格待核）",city:"南京/南通/江苏其他",track:"2027届综合正式岗位",type:"2027届校招/社招混合",published:"2026-10-14",deadline:"2026-10-30",priority:"B",status:"资格待核",match:"工商管理本科、国企人力行政经历。",risk:"需区分校招社招、具体专业及党员条件；农业行业非首选。",url:""},
+    {id:"hc-009",company:"上海七猫文化传媒",role:"2027届职能管培生：人力、行政、公共事务、文旅活动策划",city:"上海",track:"文化传媒/综合职能",type:"2027届校招",published:"2026-10-15",deadline:"",priority:"B",status:"资格待核",match:"工商管理本科、国企人力行政及出版实习。",risk:"民营企业；专业、劳动合同主体、工时制度、考试和截止日期待核。",url:"https://www.qimao.com/"}
   ],
   watch: [
     {company:"中国出版集团及旗下商务印书馆、中华书局、三联、人文等",city:"北京/上海",type:"出版央企",why:"严肃出版、知识壁垒高、稳定读者群。",targets:"编辑、策划、综合管理、人力"},
