@@ -44,11 +44,11 @@ window.CAREER_DATA = {
     {id:"app-037",company:"双汇",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-16",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-16确认已拒绝；具体岗位信息未记录，不补猜。",url:""}
   ],
   hc: [
-    {id:"hc-001",company:"中国教育出版传媒集团有限公司",role:"2027年应届高校毕业生公开招聘（所属出版单位多岗位）",city:"北京",track:"出版/文化央企",type:"2027应届公开招聘",published:"2026-09-29",deadline:"2026-10-21",priority:"S",status:"建议尽快投递",match:"历史学硕士与出版实习高度匹配；工商管理本科可覆盖部分综合管理方向。",risk:"需逐岗核对专业与岗位条件。",url:"https://jybzp.chsi.com.cn/home/bul/announcement/ymq873fg3ej1azdq"},
+    {id:"hc-001",company:"中国教育出版传媒集团有限公司",role:"2027年应届高校毕业生公开招聘（所属出版单位多岗位）",city:"北京",track:"出版/文化央企",type:"2027应届公开招聘",published:"2026-09-29",deadline:"2026-10-21",priority:"S",status:"本轮无合适岗位",match:"用户已逐岗核对，本轮无符合资格及方向的岗位。",risk:"本轮不再提醒投递。",url:"https://jybzp.chsi.com.cn/home/bul/announcement/ymq873fg3ej1azdq"},
     {id:"hc-002",company:"中国出版集团有限公司",role:"2027届校园招聘（多岗位）",city:"北京/上海",track:"出版/文化央企",type:"校招正式岗",published:"2026-09-23",deadline:"2026-11-15",priority:"S",status:"已投递/部分岗位",match:"历史学、出版实习、文字研究与工商管理背景均可覆盖不同岗位。",risk:"每人可填职位有限，需做志愿优先级。",url:"https://cnpubg.iguopin.com/"},
     {id:"hc-003",company:"中信出版集团",role:"“璞玉计划”助理编辑/营销编辑等",city:"北京",track:"出版",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-12-31",priority:"S",status:"已投递/平台互动",match:"历史学硕士、出版实习、内容研究与文字能力匹配。",risk:"需要按岗位方向定制材料。",url:""},
     {id:"hc-004",company:"外语教学与研究出版社",role:"市场助理等校招岗位",city:"北京",track:"出版",type:"2027秋招正式岗",published:"2026-09-21",deadline:"2026-11-15",priority:"B",status:"待评估",match:"出版社实习、本科工商管理、文化内容理解。",risk:"部分岗位偏市场而非编辑。",url:"http://hr.fltrp.com/campus"},
-    {id:"hc-005",company:"华数传媒控股",role:"2027校招相关岗位",city:"杭州",track:"国企传媒",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-10-20",priority:"B",status:"待评估",match:"杭州、国企传媒平台；可关注综合/内容/项目岗位。",risk:"现有明确岗位可能偏技术。",url:"https://wasu.hotjob.cn"}
+    {id:"hc-005",company:"华数传媒控股",role:"2027校招相关岗位",city:"杭州",track:"国企传媒",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-10-20",priority:"B",status:"本轮无合适岗位",match:"用户已核对，本轮无合适岗位。",risk:"现有明确岗位可能偏技术。",url:"https://wasu.hotjob.cn"}
   ],
   watch: [
     {company:"中国出版集团及旗下商务印书馆、中华书局、三联、人文等",city:"北京/上海",type:"出版央企",why:"严肃出版、知识壁垒高、稳定读者群。",targets:"编辑、策划、综合管理、人力"},
