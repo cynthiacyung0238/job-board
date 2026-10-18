@@ -1,7 +1,7 @@
 (function(){
 const DATA=window.CAREER_DATA||{applications:[],hc:[],watch:[],meta:{}};
-const STATUSES=["候选待投","已投递","HR感兴趣","交换简历","已查看","筛选通过","笔试","面试","Offer","主动拒绝","背调后放弃","已拒绝Offer","不合适","停止招聘","无后续"];
-const ARCHIVE=new Set(["主动拒绝","背调后放弃","已拒绝Offer","不合适","停止招聘","无后续"]);
+const STATUSES=["候选待投","已投递","HR感兴趣","交换简历","已查看","筛选通过","笔试","面试","Offer","未进面试","主动拒绝","背调后放弃","已拒绝Offer","不合适","停止招聘","无后续"];
+const ARCHIVE=new Set(["未进面试","主动拒绝","背调后放弃","已拒绝Offer","不合适","停止招聘","无后续"]);
 const POSITIVE=new Set(["HR感兴趣","交换简历","已查看"]);
 const STORAGE_PATCH="career-dashboard-patches-v2", STORAGE_EXTRA="career-dashboard-extra-v2";
 let patches=read(STORAGE_PATCH,{}), extras=read(STORAGE_EXTRA,[]), currentId=null;
