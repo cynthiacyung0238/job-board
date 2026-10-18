@@ -1,6 +1,6 @@
 window.CAREER_DATA = {
   meta: {
-    updated: "2026-10-16",
+    updated: "2026-10-18",
     note: "平台投递仅记录出现HR‘感兴趣/交换简历/简历合适’等正向信号的机会；未注明后续者，默认正向反馈后暂无进一步回复。"
   },
   applications: [
@@ -16,7 +16,7 @@ window.CAREER_DATA = {
     {id:"app-010",company:"中粮油脂控股有限公司",role:"优粮生计划-宣传综合岗",city:"",salary:"",source:"应届生/51job",recruitType:"2027校招",employment:"正式全职",track:"品牌传播/综合管理",status:"已投递",applied:"2026-09-23",lastContact:"",deadline:"",priority:"B",core:false,match:"宣传材料、企业文化与国企综合经历可迁移。",risk:"行业非核心兴趣。",next:"等待筛选。",note:"截图显示该岗位；CSV以‘中粮集团-宣传综合岗’记录。",url:""},
     {id:"app-011",company:"中粮集团有限公司",role:"优粮生计划-战略规划岗",city:"",salary:"",source:"应届生/51job",recruitType:"2027校招",employment:"正式全职",track:"综合管理/战略",status:"已投递",applied:"2026-09-23",lastContact:"",deadline:"",priority:"B",core:false,match:"工商管理本科+企业研究/材料能力。",risk:"战略岗位竞争和专业偏好需关注。",next:"等待筛选。",note:"",url:""},
     {id:"app-012",company:"中粮科工股份有限公司",role:"行政纪检专员",city:"",salary:"",source:"应届生/51job",recruitType:"2027校招",employment:"正式全职",track:"党群行政/综合管理",status:"已投递",applied:"2026-09-23",lastContact:"",deadline:"",priority:"B",core:false,match:"党群材料、行政和档案经历。",risk:"非核心行业。",next:"等待筛选。",note:"",url:""},
-    {id:"app-013",company:"2027武汉选聘管培",role:"江汉关博物馆",city:"武汉",salary:"",source:"单独网申",recruitType:"2027选聘/管培",employment:"正式全职",track:"文博/综合管理",status:"已投递",applied:"2026-09-23",lastContact:"",deadline:"",priority:"S",core:true,match:"文博场景与历史学专业高度一致，武汉地域也有优势。",risk:"具体岗位职责与流程需等待通知。",next:"高优先级等待后续。",note:"",url:"https://wuhan.nomax.vip/tip/stdlogin.do?method=fwdLoginPage"},
+    {id:"app-013",company:"武汉江汉关博物馆",role:"陈列研究岗",city:"武汉",salary:"",source:"2027武汉选聘/单独网申",recruitType:"2027选聘",employment:"正式全职",track:"文博/研究",status:"未进面试",applied:"2026-09-23",lastContact:"2026-10-18",deadline:"",priority:"S",core:true,match:"文博场景与历史学专业高度一致，武汉地域也有优势。",risk:"本轮未进入面试。",next:"企业侧未进入面试，归档。",note:"2026-10-18确认未进入面试。",url:"https://wuhan.nomax.vip/tip/stdlogin.do?method=fwdLoginPage"},
     {id:"app-014",company:"中国能源建设集团广东火电工程有限公司",role:"党务管理岗",city:"广州",salary:"",source:"国聘/校招",recruitType:"2027校招",employment:"正式全职",track:"党群行政",status:"已投递",applied:"2026-09-23",lastContact:"",deadline:"",priority:"B",core:false,match:"两段国企党群实习高度相关。",risk:"地域与行业一般；政治面貌要求需以正式资格审核为准。",next:"等待通知。",note:"",url:"https://www.iguopin.com/job/detail?id=217447296680330524&project_id=215123984184772101"},
     {id:"app-015",company:"中国华能",role:"教研管理岗",city:"",salary:"",source:"单独网申",recruitType:"2027校招",employment:"正式全职",track:"研究/综合管理",status:"已投递",applied:"2026-09-23",lastContact:"",deadline:"",priority:"B",core:false,match:"研究训练、材料写作、项目整理能力。",risk:"具体单位/地点需补充。",next:"等待筛选。",note:"",url:"https://zhaopin.chng.com.cn/ManagementTraineeRecruit?positionId=2000229"},
 
@@ -41,7 +41,8 @@ window.CAREER_DATA = {
     {id:"app-034",company:"沃尔玛",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-15",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-15确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
     {id:"app-035",company:"德州仪器",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-15",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-15确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
     {id:"app-036",company:"伊利",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-16",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-16确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
-    {id:"app-037",company:"双汇",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-16",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-16确认已拒绝；具体岗位信息未记录，不补猜。",url:""}
+    {id:"app-037",company:"双汇",role:"岗位未记录",city:"",salary:"",source:"招聘平台/待补",recruitType:"平台机会",employment:"正式全职/待核",track:"待补",status:"主动拒绝",applied:"",lastContact:"2026-10-16",deadline:"",priority:"C",core:false,match:"",risk:"",next:"已拒绝，归档。",note:"2026-10-16确认已拒绝；具体岗位信息未记录，不补猜。",url:""},
+    {id:"app-038",company:"北京市九公山长城纪念林有限公司（泰康九公山）",role:"2027管培生（岗位名称待补）",city:"北京",salary:"",source:"招聘平台/HR沟通",recruitType:"2027应届管培",employment:"正式全职",track:"综合管理/运营管理",status:"主动拒绝",applied:"",lastContact:"2026-10-18",deadline:"2027-06-30",priority:"B",core:false,match:"跨部门协同、企业文化、综合管理与轮岗培养方向与经历有一定匹配。",risk:"业务主体为九公山纪念林；轮岗包含市场、文旅、运营及营销管理等方向，实际定岗与业务属性需重点核实。",next:"已拒绝，归档。",note:"2026-10-18确认主动拒绝。",url:""}
   ],
   hc: [
     {id:"hc-001",company:"中国教育出版传媒集团有限公司",role:"2027年应届高校毕业生公开招聘（所属出版单位多岗位）",city:"北京",track:"出版/文化央企",type:"2027应届公开招聘",published:"2026-09-29",deadline:"2026-10-21",priority:"S",status:"本轮无合适岗位",match:"用户已逐岗核对，本轮无符合资格及方向的岗位。",risk:"本轮不再提醒投递。",url:"https://jybzp.chsi.com.cn/home/bul/announcement/ymq873fg3ej1azdq"},
