@@ -1,8 +1,9 @@
 window.CAREER_DATA = {
   meta: {
-    updated: "2026-10-19",
+    updated: "2026-10-20",
     note: "平台投递仅记录出现HR‘感兴趣/交换简历/简历合适’等正向信号的机会；未注明后续者，默认正向反馈后暂无进一步回复。"
   },
+  recruitmentExclusions: [{company:"阅文集团",reason:"用户2026-10-20明确不考虑：非国企；后续不再推荐或提醒相关岗位。"},{company:"上海申迪集团",reason:"用户2026-10-20明确排除：与迪士尼相关，家庭不接受。"}],
   applications: [
     {id:"app-001",company:"商务印书馆有限公司",role:"人力资源管理",city:"北京",salary:"",source:"国聘/单独网申",recruitType:"2027校招",employment:"正式全职",track:"文化出版/人力HR",status:"已投递",applied:"2026-09-28",lastContact:"",deadline:"",priority:"A",core:true,match:"中国出版集团体系；工商管理本科+两段国企综合/人事党群经历可转译。",risk:"需等待后续筛选。",next:"等待通知；如开放补充材料则及时跟进。",note:"",url:"https://www.iguopin.com/job/detail?id=218413998171750588"},
     {id:"app-002",company:"中国大百科全书出版社有限公司",role:"史宪工作室-编辑",city:"北京",salary:"",source:"国聘/单独网申",recruitType:"2027校招",employment:"正式全职",track:"文化出版/编辑内容",status:"已投递",applied:"2026-09-28",lastContact:"",deadline:"",priority:"S",core:true,match:"历史学硕士、史料整理与出版社编辑实习直接匹配。",risk:"北京岗位；竞争可能较强。",next:"重点等待笔试/面试通知。",note:"",url:""},
@@ -55,10 +56,12 @@ window.CAREER_DATA = {
     {id:"hc-003",company:"中信出版集团",role:"“璞玉计划”助理编辑/营销编辑等",city:"北京",track:"出版",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-12-31",priority:"S",status:"已投递/平台互动",match:"历史学硕士、出版实习、内容研究与文字能力匹配。",risk:"需要按岗位方向定制材料。",url:""},
     {id:"hc-004",company:"外语教学与研究出版社",role:"市场助理等校招岗位",city:"北京",track:"出版",type:"2027秋招正式岗",published:"2026-09-21",deadline:"2026-11-15",priority:"B",status:"待评估",match:"出版社实习、本科工商管理、文化内容理解。",risk:"部分岗位偏市场而非编辑。",url:"http://hr.fltrp.com/campus"},
     {id:"hc-005",company:"华数传媒控股",role:"2027校招相关岗位",city:"杭州",track:"国企传媒",type:"2027校招正式岗",published:"2026-09-01",deadline:"2026-10-20",priority:"B",status:"本轮无合适岗位",match:"用户已核对，本轮无合适岗位。",risk:"现有明确岗位可能偏技术。",url:"https://wasu.hotjob.cn"},
-    {id:"hc-006",company:"江苏凤凰出版传媒集团",role:"2026秋招：文科编辑、编校、内容策划（逐岗资格待核）",city:"南京/江苏其他城市",track:"文化出版国企",type:"2027届校招/秋季招聘",published:"2026-10-09",deadline:"2026-11-01",priority:"A",status:"资格待核",match:"历史学硕士、出版社编辑实习；明确包含2027届。",risk:"每人限报1岗；岗位专业、党员要求及具体用工主体待逐岗核实。",url:"https://campus.51job.com/ppmg2026"},
-    {id:"hc-007",company:"浙江出版联合集团",role:"2026秋招：学术编辑（2027届资格待核）",city:"杭州/浙江",track:"文化出版国企",type:"2026秋季招聘",published:"2026-09-19",deadline:"2026-10-25",priority:"A",status:"资格待核",match:"杭州、学术编辑与历史研究背景相关。",risk:"尚未确认2027届毕业生资格、历史学专业要求及具体党员条件。",url:"https://www.zjcb.com/"},
-    {id:"hc-008",company:"江苏省农垦集团",role:"2026秋招：综合办公室、企业管理方向（逐岗资格待核）",city:"南京/南通/江苏其他",track:"2027届综合正式岗位",type:"2027届校招/社招混合",published:"2026-10-14",deadline:"2026-10-30",priority:"B",status:"资格待核",match:"工商管理本科、国企人力行政经历。",risk:"需区分校招社招、具体专业及党员条件；农业行业非首选。",url:""},
-    {id:"hc-009",company:"上海七猫文化传媒",role:"2027届职能管培生：人力、行政、公共事务、文旅活动策划",city:"上海",track:"文化传媒/综合职能",type:"2027届校招",published:"2026-10-15",deadline:"",priority:"B",status:"资格待核",match:"工商管理本科、国企人力行政及出版实习。",risk:"民营企业；专业、劳动合同主体、工时制度、考试和截止日期待核。",url:"https://www.qimao.com/"}
+    {id:"hc-006",company:"江苏凤凰出版传媒集团",role:"2026秋招：文科编辑、编校、内容策划（逐岗资格待核）",city:"南京/江苏其他城市",track:"文化出版国企",type:"2027届校招/秋季招聘",published:"2026-10-09",deadline:"2026-11-01",priority:"A",status:"已投递",match:"历史学硕士、出版社编辑实习；明确包含2027届。",risk:"用户2026-10-20确认已投递；无需再次提醒网申，仅关注笔试、面试及录用流程。",url:"https://campus.51job.com/ppmg2026"},
+    {id:"hc-007",company:"浙江出版联合集团",role:"2026秋招：学术编辑（2027届资格待核）",city:"杭州/浙江",track:"文化出版国企",type:"2026秋季招聘",published:"2026-09-19",deadline:"2026-10-25",priority:"A",status:"已投递",match:"杭州、学术编辑与历史研究背景相关。",risk:"用户2026-10-20确认已投递；无需再次核岗或提醒网申，仅关注后续流程。",url:"https://www.zjcb.com/"},
+    {id:"hc-008",company:"江苏省农垦集团",role:"2026秋招：综合办公室、企业管理方向（逐岗资格待核）",city:"南京/南通/江苏其他",track:"2027届综合正式岗位",type:"2027届校招/社招混合",published:"2026-10-14",deadline:"2026-10-30",priority:"B",status:"本轮无合适岗位",match:"工商管理本科、国企人力行政经历。",risk:"用户2026-10-20已核对，本轮没有合适岗位；不再作为待投或资格待核提醒。",url:""},
+    {id:"hc-009",company:"上海七猫文化传媒",role:"2027届职能管培生：人力、行政、公共事务、文旅活动策划",city:"上海",track:"文化传媒/综合职能",type:"2027届校招",published:"2026-10-15",deadline:"",priority:"B",status:"资格待核",match:"工商管理本科、国企人力行政及出版实习。",risk:"七猫并非阅文；用户已收到七猫责编测评，此条为不同的职能管培生线索，尚未确认是否申请。不得因排除阅文而误改七猫。",url:"https://www.qimao.com/"},
+    {id:"hc-010",company:"东部机场集团",role:"2027届职能支持岗、集团管培生",city:"南京/常州/淮安/扬州",track:"2027届综合正式岗位",type:"2027届校招",published:"2026-10-16",deadline:"2026-11-06",priority:"A",status:"已投递",match:"工商管理本科、国企行政人力实习；2027届校招。",risk:"用户2026-10-20确认已投；仅追踪笔试、面试和录用，不再提醒网申。",url:"https://easternairports.zhaopin.com/"},
+    {id:"hc-011",company:"上海申迪集团",role:"2027届管理培训生",city:"上海",track:"文旅国企/2027届综合正式岗",type:"2027届校招",published:"2026-10-13",deadline:"2026-10-26",priority:"C",status:"用户不考虑",match:"上海文旅企业，但用户明确不考虑。",risk:"用户2026-10-20明确因与迪士尼业务关联、家庭不接受而排除；后续不再推荐。",url:""}
   ],
   watch: [
     {company:"中国出版集团及旗下商务印书馆、中华书局、三联、人文等",city:"北京/上海",type:"出版央企",why:"严肃出版、知识壁垒高、稳定读者群。",targets:"编辑、策划、综合管理、人力"},
