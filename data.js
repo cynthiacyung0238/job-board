@@ -1,6 +1,6 @@
 window.CAREER_DATA = {
   meta: {
-    updated: "2026-10-24",
+    updated: "2026-10-25",
     lastScan: "2026-10-24：未确认新增高匹配岗位；上海世纪出版集团2027届秋招仍未核实；上海市事业单位2026年第二批需已有2026年3月笔试成绩且2027届不符。",
     note: "平台投递仅记录出现HR‘感兴趣/交换简历/简历合适’等正向信号的机会；未注明后续者，默认正向反馈后暂无进一步回复。"
   },
@@ -25,7 +25,7 @@ window.CAREER_DATA = {
 
     {id:"app-016",company:"中信出版集团",role:"校招-助理编辑（营销方向、策划方向）",city:"北京",salary:"9-12K",source:"BOSS",recruitType:"2027校招",employment:"正式全职",track:"文化出版/编辑内容",status:"交换简历",applied:"2026-09-16",lastContact:"2026-09-16",deadline:"",priority:"S",core:true,match:"历史硕士+出版社编辑实习+研究写作。",risk:"平台交换简历只是弱正向信号；暂无进一步回复。",next:"中信出版集团校招已确认投递，保留此前BOSS交换简历记录；只跟进后续进展。",note:"正向反馈后暂无进一步回复。",url:""},
     {id:"app-017",company:"后浪出版社",role:"图书编辑",city:"北京",salary:"7-8K",source:"BOSS",recruitType:"平台机会",employment:"正式全职",track:"文化出版/编辑内容",status:"交换简历",applied:"2026-09-22",lastContact:"2026-09-22",deadline:"",priority:"A",core:true,match:"编辑实习与历史学训练直接相关。",risk:"平台互动未转化为正式面试。",next:"可低成本跟进一次，之后不反复追问。",note:"正向反馈后暂无进一步回复。",url:""},
-    {id:"app-018",company:"七猫",role:"脑洞短篇小说责编（管培生）",city:"杭州",salary:"8-12K·14薪",source:"BOSS",recruitType:"校招/管培",employment:"正式全职",track:"编辑内容",status:"笔试",applied:"2026-09-28",lastContact:"2026-10-16",deadline:"",priority:"A",core:false,match:"内容编辑、文字判断与读者意识可迁移。",risk:"网文内容生态与严肃出版差异较大；当前测评题为女频责编，需确认是否只是统一责编测评，还是实际岗位偏女频。",next:"先向HR确认测评与实际岗位方向的关系；若只是统一测评且耗时可控，建议完成。",note:"2026-10-16收到笔试/测评；题目方向为女频责编。",url:""},
+    {id:"app-018",company:"七猫",role:"脑洞短篇小说责编（管培生）",city:"杭州",salary:"8-12K·14薪",source:"BOSS",recruitType:"校招/管培",employment:"正式全职",track:"编辑内容",status:"主动拒绝",applied:"2026-09-28",lastContact:"2026-10-25",deadline:"",priority:"A",core:false,match:"内容编辑、文字判断与读者意识可迁移。",risk:"网文内容生态与严肃出版差异较大；测评题为女频责编。",next:"笔试已通过并获得上海线下面试机会，用户决定不参加，归档。",note:"2026-10-16收到女频责编方向笔试/测评；2026-10-25确认笔试通过，但不计划前往上海参加后续面试，属于主动放弃推进，并非企业侧淘汰。",url:""},
     {id:"app-019",company:"外企德科数字技术有限公司",role:"HR（学习发展方向）",city:"杭州",salary:"8000-12000元",source:"BOSS",recruitType:"平台机会",employment:"正式全职",track:"人力HR/学习发展",status:"HR感兴趣",applied:"2026-10-03",lastContact:"2026-10-03",deadline:"",priority:"A",core:false,match:"人力实习+培训/材料/项目协调能力。",risk:"需核实实际用工主体、是否外包/派遣及工作内容。",next:"只有明确直签、职责合适再推进。",note:"正向反馈后暂无进一步回复。",url:""},
     {id:"app-020",company:"外企德科",role:"行政综合助理一（地产）",city:"杭州",salary:"1.2-1.5万",source:"BOSS",recruitType:"平台机会",employment:"正式全职/待核",track:"综合管理",status:"HR感兴趣",applied:"2026-09-22",lastContact:"2026-09-22",deadline:"",priority:"B",core:false,match:"行政综合、材料和协调经验。",risk:"需核实用工主体与是否派遣；地产条线非核心偏好。",next:"若再联系先问劳动合同主体。",note:"正向反馈后暂无进一步回复。",url:""},
     {id:"app-021",company:"中国人寿保险股份有限公司武汉市分公司",role:"行政人事专员",city:"武汉",salary:"5000-6000元",source:"BOSS",recruitType:"平台机会",employment:"正式全职/待核",track:"人力HR/综合管理",status:"HR感兴趣",applied:"2026-10-03",lastContact:"2026-10-03",deadline:"",priority:"C",core:false,match:"人力行政经历。",risk:"保险行业不在目标行业池；需警惕岗位是否带销售属性。",next:"非核心，除非职责纯后台且条件合适。",note:"正向反馈后暂无进一步回复。",url:""},
