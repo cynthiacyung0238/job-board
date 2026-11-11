@@ -137,7 +137,27 @@
   </form>
 </dialog>
 
-<script src="data.js"></script>
-<script src="app.js"></script>
+<div id="loadDiagnostic" role="status" style="padding:12px 20px;color:#9a3412;font-size:13px">正在加载岗位记录…</div>
+<script>
+window.addEventListener('error', function(e) {
+  var d=document.getElementById('loadDiagnostic');
+  if(d) d.textContent='岗位数据加载失败：'+(e.message||'脚本文件未能加载')+'。请刷新页面；若持续出现，请反馈此提示。';
+});
+</script>
+<script src="data.js?v=20261111a" onerror="document.getElementById('loadDiagnostic').textContent='岗位数据文件 data.js 加载失败，请检查 GitHub Pages 部署。'"></script>
+<script src="app.js?v=20261111a" onerror="document.getElementById('loadDiagnostic').textContent='页面程序 app.js 加载失败，请检查 GitHub Pages 部署。'"></script>
+<script>
+(function(){
+var d=document.getElementById('loadDiagnostic');
+if(window.CAREER_DATA && Array.isArray(window.CAREER_DATA.applications) && document.querySelectorAll('#applicationRows tr').length){
+ d.textContent='已载入 '+window.CAREER_DATA.applications.length+' 条云端投递记录。';
+ d.style.color='#166534';
+}else if(window.CAREER_DATA){
+ d.textContent='云端数据已到达（'+window.CAREER_DATA.applications.length+' 条），但页面未成功渲染，请反馈此提示。';
+}else{
+ d.textContent='未检测到云端岗位数据，请反馈此提示。';
+}
+})();
+</script>
 </body>
 </html>
